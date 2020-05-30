@@ -9,6 +9,7 @@ import Media from './components/media';
 import Contact from './components/contact';
 import LiveBooking from './components/liveBooking';
 import RecordingBooking from './components/recordingBooking';
+import Reviews from './components/reviews';
 import './App.css';
 
 class App extends Component {
@@ -24,6 +25,7 @@ class App extends Component {
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/live" component={LiveBooking} />
             <Route exact path="/record" component={RecordingBooking} />
+            <Route exact path="/reviews" component={Reviews} />
         </main>
         <Footer />
       </div>

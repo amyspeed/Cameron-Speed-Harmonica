@@ -1,11 +1,18 @@
 nav {
-    background-color: rgb(51, 63, 0);
-    padding-top: 10px;
-    padding-bottom: 10px;
+    /* background-color: rgb(51, 63, 0); */
+    padding: 0;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 2;
+    padding-top: 20px;
+}
+
+.signature-logo {
+    width: 200px;
+    display: inline-block;
+    text-align: left;
+    transition: all ease-in-out 0.3s;
 }
 
 li {
@@ -19,4 +26,8 @@ li {
 li:hover {
     color: rgb(115, 255, 232);
     transform: translate(0, -2px);
+}
+
+.signature-logo:hover {
+    transform: translate(0, -3px) scale(1.1);
 }
