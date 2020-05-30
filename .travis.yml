@@ -14,7 +14,7 @@ before_deploy:
 
 deploy:
   provider: script
-  script: netlify deploy -s cameron-speed -t 47ef4c0a-737e-4f23-88cc-b3bfa4f9722e -p ./build
+  script: netlify deploy -s cameron-speed -t db560dd38047421bec8a4bc075d80ef980ae421a7926eb63a56cea64da00b34c -p ./build
   skip_cleanup: true
   on:
     branch: mas
