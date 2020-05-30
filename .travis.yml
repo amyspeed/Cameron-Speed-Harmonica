@@ -1,2 +1,8 @@
 language: node_js
 node_js: node
+
+deploy:
+  provider: netlify
+  site: cameron-speed
+  auth: 47ef4c0a-737e-4f23-88cc-b3bfa4f9722e
+  edge: true # opt in to dpl v2
