@@ -16,7 +16,7 @@ class App extends Component {
   render() {
     return(
       <div className="app">
-        <NavBar/>
+        {/* <NavBar/> */}
         <main role="main">
             <Route exact path="/" component={Landing} />
             <Route exact path="/about" component={About} />
@@ -27,7 +27,7 @@ class App extends Component {
             <Route exact path="/record" component={RecordingBooking} />
             <Route exact path="/reviews" component={Reviews} />
         </main>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     )
   }
