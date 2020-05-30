@@ -8,7 +8,7 @@ const Landing = () => {
             <div className="overlay"></div>
             <div className="hero"></div>
             <div className="content">
-                {/* <h1>Cameron Sucks and Blows for your record</h1> */}
+                <h1>TEST TRAVIS AND NETLIFY</h1>
             </div>
         </div>
 
