@@ -1,21 +1,6 @@
-html {
-  background-color: rgb(175, 175, 175);
-  color: white;
-  text-align: center;
-}
-
-main {
-  padding-top: 40px;
-}
-
-img {
-  width: 50%;
-  transition: all ease-in-out 0.5s;
-}
-
-img:hover {
-  transform: scale(1.05) translate(0px, -3px);
-  box-shadow: 10px 10px 20px rgba(0,0,0,0.7);
+main, .app {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .fiverr {
@@ -30,10 +15,6 @@ img:hover {
 .fiverr:hover {
   transform: scale(1.05) translate(0px, -3px);
   text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
-}
-
-a {
-  color: white;
 }
 
 iframe {

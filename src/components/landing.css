@@ -1,0 +1,17 @@
+.landing {
+    position: relative;
+}
+
+.hero {
+    background-image: url('../images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 98vh;
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+}
+
+.content {
+    padding-top: 100px;
+}

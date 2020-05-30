@@ -1,13 +1,14 @@
 import React from 'react';
 
-const IMAGE = require('../images/sexy-photo.jpeg')
+import './landing.css';
 
 const Landing = () => {
     return(
-        <div>
-            <h1>Cameron Sucks and Blows for your record</h1>
-
-            <a href="https://www.facebook.com/Cameron-Speed-Harmonica-147359495309180"><img src={IMAGE} /></a>
+        <div className="landing">
+            <div className="hero"></div>
+            <div className="content">
+                <h1>Cameron Sucks and Blows for your record</h1>
+            </div>
         </div>
 
     )

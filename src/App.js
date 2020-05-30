@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import NavBar from './components/navBar';
+import Footer from './components/footer';
 import Landing from './components/landing';
 import About from './components/about';
 import Pricing from './components/pricing';
@@ -24,6 +25,7 @@ class App extends Component {
             <Route exact path="/live" component={LiveBooking} />
             <Route exact path="/record" component={RecordingBooking} />
         </main>
+        <Footer />
       </div>
     )
   }

@@ -1,0 +1,55 @@
+footer {
+    background-color: rgb(73, 73, 73);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.icon-wrapper {
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out 0.15s;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+
+}
+
+#facebook {
+    background-color: #4267B2;
+}
+
+#paypal {
+    background-color: #0079C1;
+}
+
+#mail {
+    background-color: rgb(25, 36, 0);
+}
+
+.img-icon {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.awesome-icon {
+    font-size: 13.5px;
+    color: white;
+}
+
+.icon-wrapper:hover, .icon-wrapper:focus {
+    transform: translate(0px, -2px);
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+}
