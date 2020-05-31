@@ -1,0 +1,17 @@
+.plane-icon {
+    text-align: center;
+    color: white;
+    font-size: 150px;
+}
+
+.send-link-wrap {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    transition: all ease-in-out 0.3s;
+}
+
+.send-link-wrap:hover, .send-link-wrap:focus {
+    transform: translate(0px, -1.5px) scale(1.05);
+}
