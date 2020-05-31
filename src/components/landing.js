@@ -8,7 +8,7 @@ const Landing = () => {
             <div className="overlay"></div>
             <div className="hero"></div>
             <div className="content">
-                <div className="text-box">
+                {/* <div className="text-box">
                     <p>text</p>
                 </div>
                 <div className="text-box">
@@ -43,7 +43,7 @@ const Landing = () => {
                 </div>
                 <div className="text-box">
                     <p>text</p>
-                </div>
+                </div> */}
             </div>
         </div>
 

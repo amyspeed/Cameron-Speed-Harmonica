@@ -8,7 +8,7 @@ const Media = () => {
             <div className="overlay"></div>
             <div className="background"></div>
             <div className = "page-content">
-                <div className="row">
+                <div className="row iframe-row">
                     <div className="col-6">
                         <iframe title="spotify-playlist" src="https://open.spotify.com/embed/playlist/64RBGUnwoQIyiZU5ubFTsb" width="100%" height="600" frameBorder="2" allowtransparency="true" allow="encrypted-media"></iframe>
                     </div>
