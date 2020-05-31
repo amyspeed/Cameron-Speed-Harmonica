@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 
 import './navBar.css';
 
 const NavBar = () => {
-    const [logoSmaller, setLogoSmaller] = useState(false);
     let location = useLocation();
+    let history = useHistory();
+    const [logoSmaller, setLogoSmaller] = useState(false);
     const [pathname, setPathname] = useState('/');
+    const [checked, setChecked] = useState(false);
 
     useEffect(() => {
         console.log(pathname)
@@ -40,33 +42,39 @@ const NavBar = () => {
         }
     };
 
+    const closeMenuLink = (path) => {
+        setChecked(false);
+        history.push(path);
+    }
+
     return(
         <nav>
             <Link to='/'>
                 <img src={require('../images/sig-logo.png')} className={ logoSmaller ? "signature-logo smaller" : "signature-logo" } />
             </Link>
 
-<div className="hamburger-container">
-            <input type="checkbox" className="toggler" />
-            <div className="hamburger">
-                <div className="line"></div>
-            </div>
-            <div className="menu">
-                <div>
+            <div className="hamburger-container">
+                <input type="checkbox" className="toggler" id="toggler" checked={checked} onChange={() => setChecked(!checked)} />
+                <div className="hamburger">
+                    <div className="line"></div>
+                </div>
+                <div className="menu">
                     <div>
-                        <ul>
-                            <Link to='/about'><li>about</li></Link>
-                            <Link to='/contact'><li>contact</li></Link>
-                            <Link to='/live'><li>book live</li></Link>
-                            <Link to='/record'><li>book recording</li></Link>
-                            <Link to='/media'><li>media</li></Link>
-                            <Link to='/pricing'><li>pricing</li></Link>
-                            <Link to='/reviews'><li>reviews</li></Link>
-                        </ul>
+                        <div>
+                            <ul>
+                                <li onClick={() => closeMenuLink('/about')}>about</li>
+                                <li onClick={() => closeMenuLink('/contact')}>contact</li>
+                                <li onClick={() => closeMenuLink('/live')}>book live</li>
+                                <li onClick={() => closeMenuLink('/record')}>book recording</li>
+                                <li onClick={() => closeMenuLink('/media')}>media</li>
+                                {/* <li onClick={() => closeMenuLink('/pricing')}>pricing</li>
+                                <li onClick={() => closeMenuLink('/reviews')}>reviews</li> */}
+                                <li onClick={() => closeMenuLink('/')}>home</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </nav>
     )
 }

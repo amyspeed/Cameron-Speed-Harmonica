@@ -1,11 +1,11 @@
-.landing {
+.media {
     position: relative;
 }
 
-.hero {
-    background-image: url('../images/homegrown.jpg');
+.background {
+    background-image: url('../images/hero.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: top;
     height: 98vh;
     width: 100vw;
     position: fixed;
@@ -22,9 +22,9 @@
     background: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 40%, rgb(0, 0, 0) 80%);
 }
 
-.content {
-    position: absolute;
-    margin-top: 100vh;
-    z-index: 1;
-    width: 100%;
+iframe {
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.7);
+    opacity: 0.8;
+    margin-bottom: 15px;
 }

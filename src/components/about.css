@@ -1,0 +1,10 @@
+.chisolm {
+    background-image: url('../images/chisolm.jpg');
+    background-size: cover;
+    background-position: top;
+    height: 98vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}

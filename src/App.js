@@ -10,7 +10,9 @@ import Contact from './components/contact';
 import LiveBooking from './components/liveBooking';
 import RecordingBooking from './components/recordingBooking';
 import Reviews from './components/reviews';
+
 import './App.css';
+import './float-grid.css';
 
 class App extends Component {
   render() {
