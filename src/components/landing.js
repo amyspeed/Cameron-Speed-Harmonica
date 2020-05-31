@@ -8,7 +8,42 @@ const Landing = () => {
             <div className="overlay"></div>
             <div className="hero"></div>
             <div className="content">
-                <h1>TEST TRAVIS AND NETLIFY 2</h1>
+                <div className="text-box">
+                    <p>text</p>
+                </div>
+                <div className="text-box">
+                    <p>text</p>
+                </div>
+                <div className="text-box">
+                    <p>text</p>
+                </div>
+                <div className="text-box">
+                    <p>text</p>
+                </div>
+                <div className="text-box">
+                    <p>text</p>
+                </div>
+                <div className="text-box">
+                    <p>text</p>
+                </div>
+                <div className="text-box">
+                    <p>text</p>
+                </div>
+                <div className="text-box">
+                    <p>text</p>
+                </div>
+                <div className="text-box">
+                    <p>text</p>
+                </div>
+                <div className="text-box">
+                    <p>text</p>
+                </div>
+                <div className="text-box">
+                    <p>text</p>
+                </div>
+                <div className="text-box">
+                    <p>text</p>
+                </div>
             </div>
         </div>
 

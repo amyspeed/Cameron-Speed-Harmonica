@@ -4,25 +4,31 @@
 
 .hero {
     background-image: url('../images/homegrown.jpg');
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
     height: 98vh;
     width: 100vw;
-    position: absolute;
+    position: fixed;
+    top: 0;
     z-index: -1;
 }
 
 .overlay {
     height: 98vh;
     width: 100vw;
-    position: absolute;
+    position: fixed;
+    top: 0;
     z-index: 0;
     background: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 40%, rgb(0, 0, 0) 80%);
 }
 
 .content {
     position: absolute;
-    padding-top: 100px;
+    margin-top: 100vh;
     z-index: 1;
     width: 100%;
+}
+
+.text-box {
+    background-color: rgba(255, 255, 255, 0.651);
 }

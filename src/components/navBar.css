@@ -9,10 +9,14 @@ nav {
 }
 
 .signature-logo {
-    width: 200px;
+    width: 40%;
     display: inline-block;
     text-align: left;
     transition: all ease-in-out 0.3s;
+}
+
+.signature-logo.smaller {
+    width: 25%;
 }
 
 li {
