@@ -7,20 +7,22 @@ const NavBar = () => {
     let location = useLocation();
     let history = useHistory();
     const [logoSmaller, setLogoSmaller] = useState(false);
-    const [pathname, setPathname] = useState('/');
+    const [pathname, setPathname] = useState('');
     const [checked, setChecked] = useState(false);
 
     useEffect(() => {
-        console.log(pathname)
         setPathname(location.pathname)
-      }, [location]);
+    }, [location]);
 
     useEffect(() => {
         // If on the landing page, the logo size depends on scroll location
         console.log(pathname);
         if (pathname === '/') {
             setLogoSmaller(false);
-            window.onscroll = () => logoSizeByScroll();
+            window.addEventListener("scroll", logoSizeByScroll)
+            return () => {
+              window.removeEventListener("scroll", logoSizeByScroll)
+            }
         }
         // If on any other page, the logo should be smaller
         else {
@@ -50,7 +52,7 @@ const NavBar = () => {
     return(
         <nav>
             <Link to='/'>
-                <img src={require('../images/sig-logo.png')} className={ logoSmaller ? "signature-logo smaller" : "signature-logo" } />
+                <img src={require('../images/sig-logo.png')} alt="signature logo" className={ logoSmaller ? "signature-logo smaller" : "signature-logo" } />
             </Link>
 
             <div className="hamburger-container">

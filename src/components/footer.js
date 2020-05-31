@@ -16,13 +16,13 @@ const Footer = () => {
                 </a>
             </div>
             <div className='icon-wrapper'>
-                <img className="img-icon" src={require("../images/fiverr.png")} />
+                <img className="img-icon" src={require("../images/fiverr.png")} alt="fiverr icon" />
             </div>
             <div className='icon-wrapper' id="paypal">
                 <FontAwesomeIcon icon={faPaypal} className="awesome-icon" />
             </div>
             <div className='icon-wrapper'>
-                <img className="img-icon" src={require("../images/venmo.png")} />
+                <img className="img-icon" src={require("../images/venmo.png")} alt="venmo icon" />
             </div>
             <div className='icon-wrapper' id="mail">
                 <Link to='/contact'><FontAwesomeIcon icon={faEnvelope} className="awesome-icon" /></Link>

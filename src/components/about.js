@@ -7,7 +7,7 @@ const About = () => {
         <div>
             <div className="overlay"></div>
             <div className="chisolm"></div>
-            <div className="page-content">
+            <div className="page-content about">
                 <div className="row">
                     <div className="col-12">
                         <div className="text-box">

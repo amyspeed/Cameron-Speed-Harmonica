@@ -11,6 +11,10 @@ main, .app {
   width: 100%;
 }
 
+.about {
+  margin-top: 33vh;
+}
+
 .text-box {
   background-color: rgba(0, 0, 0, 0.85);
   border: 2px outset rgba(41, 41, 41, 0.616);
