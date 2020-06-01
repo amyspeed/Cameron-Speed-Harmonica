@@ -8,16 +8,16 @@ const Landing = () => {
             <div className="overlay"></div>
             <div className="hero"></div>
             <div className="content">
+                <div className="text-box">
+                    <p>Review</p>
+                </div>
+                <div className="text-box">
+                    <p>text</p>
+                </div>
+                <div className="text-box">
+                    <p>text</p>
+                </div>
                 {/* <div className="text-box">
-                    <p>text</p>
-                </div>
-                <div className="text-box">
-                    <p>text</p>
-                </div>
-                <div className="text-box">
-                    <p>text</p>
-                </div>
-                <div className="text-box">
                     <p>text</p>
                 </div>
                 <div className="text-box">

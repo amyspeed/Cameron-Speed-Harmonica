@@ -25,6 +25,7 @@ main, .app {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
 }
 
 .link {
