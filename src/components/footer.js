@@ -11,7 +11,7 @@ import './footer.css';
 const Footer = () => {
     return (
         <footer>
-            <ReactTooltip id='toolTip' getContent={(dataTip) => `${dataTip}`}/>
+            <ReactTooltip id='toolTip' getContent={(dataTip) => `${dataTip}`} effect="solid"/>
             <div className='icon-wrapper' id="facebook" data-for='toolTip' data-tip='Facebook'>
                 <a href="https://www.facebook.com/Cameron-Speed-Harmonica-147359495309180" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faFacebookF} className="awesome-icon" />

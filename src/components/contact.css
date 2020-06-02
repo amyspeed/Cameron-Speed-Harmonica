@@ -1,3 +1,25 @@
+.contact-photo {
+    background-image: url('../images/the-girls.png');
+    background-size: cover;
+    background-position: top left;
+    height: 98vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+.overlay-contact {
+    height: 98vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0)), 
+                linear-gradient(to bottom, rgb(0, 0, 0) 5%, rgba(0, 0, 0, 0) 15%),
+                linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0) 60%);
+}
+
 .page-content.contact-page {
     margin-top: 200px;
 }
@@ -8,10 +30,7 @@
     border: 2px outset rgba(78, 78, 78, 0.719);
     box-shadow: 10px 10px 20px rgba(0,0,0,0.7);
     border-radius: 5px;
-    padding: 20px 30px 20px 30px;
-    /* max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto; */
+    padding-bottom: 20px;
 }
 
 textarea {
@@ -20,23 +39,35 @@ textarea {
     font-family: 'Noto Sans', sans-serif;
 }
 
-input, select, .button-container, button {
+.contact-input, .button-container, button {
     width: 100%;
     border-radius: 5px;
     border: none;
     box-shadow: 5px 10px 20px rgba(0,0,0,0.5);
     font-family: 'Noto Sans', sans-serif;
+    margin-top: 5px;
 }
 
-input, select {
+.form-col {
+    padding-top: 5px;
+}
+
+.contact-input {
     height: 35px;
+}
+
+.contact-input:focus, textarea:focus {
+    background-color: rgb(231, 255, 251);
+    border: none;
+    box-shadow: 5px 10px 20px rgba(0,0,0,0.8);
 }
 
 button {
     background-color: rgb(158, 0, 53);
-    margin-top: 15px;
     margin-bottom: 5px;
     height: 45px;
+    color: white;
+    font-size: 20px;
 }
 
 .plane-icon {

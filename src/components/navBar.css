@@ -6,6 +6,8 @@ nav {
     padding-top: 30px;
     padding-left: 5%;
     padding-right: 5%;
+    height: 150px;
+    background: linear-gradient(to bottom, rgb(0, 0, 0) 25%, rgba(0, 0, 0, 0));
 }
 
 .signature-logo {
@@ -39,7 +41,7 @@ nav {
     position: relative;
     width: 30px;
     height: 30px;
-    background: transparent;
+    background: black;
     float: right;
     border-radius: 5px;
 }
@@ -145,7 +147,7 @@ nav {
 }
 
 .hamburger-container .menu > div {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.85);
     border-radius: 50%;
     width: 250vw;
     height: 250vw;

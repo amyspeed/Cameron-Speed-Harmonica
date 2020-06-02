@@ -1,0 +1,10 @@
+.background-live {
+    background-image: url('../images/live.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 98vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}

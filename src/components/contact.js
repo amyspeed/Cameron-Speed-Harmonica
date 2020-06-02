@@ -5,6 +5,8 @@ import React, { Component, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
+import ScaleLoader from 'react-spinners/ScaleLoader';
+
 import './contact.css';
 
 class Contact extends Component {
@@ -18,8 +20,20 @@ class Contact extends Component {
             lastName: '',
             email: '',
             sent: false,
+            error: false,
             customSubject: false,
-            buttonText: <FontAwesomeIcon icon={faPaperPlane} className="plane-icon" />
+            buttonText: <FontAwesomeIcon icon={faPaperPlane} className="plane-icon" />,
+            firstNameWarn: false
+        }
+    }
+
+    componentDidMount() {
+        console.log(this.props.location.state)
+        if (this.props.location.state.fromRecord) {
+            this.setState({ subject: 'Remote Recording' });
+        }
+        if (this.props.location.state.fromLive) {
+            this.setState({ subject: 'Live Booking' });
         }
     }
 
@@ -34,11 +48,9 @@ class Contact extends Component {
 
     formSubmit = (e) => {
         e.preventDefault();
-
-        // Add form validation here
       
         this.setState({
-            buttonText: '...sending'
+            buttonText: <ScaleLoader height={25} color={"#FFFFFF"} />
         })
       
         let data = {
@@ -62,10 +74,11 @@ class Contact extends Component {
         })
         .then( res => {
             console.log(res);
-            this.setState({ sent: true }, this.resetForm())
+            this.setState({ sent: true });
         })
         .catch( () => {
           console.log('Message not sent')
+          this.setState({ error: true });
         })
     }
 
@@ -78,7 +91,16 @@ class Contact extends Component {
             lastName: '',
             email: '',
             sent: false,
+            error: false,
             customSubject: false,
+            buttonText: <FontAwesomeIcon icon={faPaperPlane} className="plane-icon" />
+        });
+    }
+
+    resetError = () => {
+        this.setState({
+            sent: false,
+            error: false,
             buttonText: <FontAwesomeIcon icon={faPaperPlane} className="plane-icon" />
         });
     }
@@ -87,6 +109,8 @@ class Contact extends Component {
     render() {
     return(
         <div>
+            <div className="overlay-contact"></div>
+            <div className="contact-photo"></div>
             <div className="page-content contact-page">
                 {/* <a className="send-link-wrap" href="mailto:cameron.l.speed@gmail.com?subject=Mail from Website">
                     <FontAwesomeIcon icon={faPaperPlane} className="plane-icon" />
@@ -112,58 +136,61 @@ class Contact extends Component {
                     ]}
                 /> */}
                 <div className="row form-row">
+                    { !this.state.sent && !this.state.error ?
                     <form className="contact-form" onSubmit={ (e) => this.formSubmit(e)}>
-                        <div className="col-6">
+                    <legend><h2>contact</h2></legend>
+                        <div className="col-6 form-col">
                             <label className="name" htmlFor="first-name">First Name</label>
                             <br/>
                             <input 
                                 onChange={e => this.setState({ firstName: e.target.value})}
                                 name="first-name"
-                                className="name"
+                                className="contact-input"
                                 type="text"
                                 placeholder="First Name"
                                 value={this.state.firstName}
+                                required
                             />
                         </div>
-                        <div className="col-6">
+                        <div className="col-6 form-col">
                             <label className="name" htmlFor="last-name">Last Name</label>
                             <br/>
                             <input 
                                 onChange={e => this.setState({ lastName: e.target.value})}
                                 name="last-name"
-                                className="name"
+                                className="contact-input"
                                 type="text"
                                 placeholder="Last Name"
                                 value={this.state.lastName}
+                                required
                             />
                         </div>
-                        <div className="col-12">
+                        <div className="col-12 form-col">
                             <label className="email" htmlFor="email">Your Email</label>
                             <br/>
                             <input 
                                 onChange={(e) => this.setState({ email: e.target.value})}
                                 name="email"
-                                className="email"
+                                className="contact-input"
                                 type="email"
                                 placeholder="your@email.com"
                                 value={this.state.email}
                                 required
                             />
                         </div>
-                        <div className="col-12">
+                        <div className="col-12 form-col">
                             <label className="subject" htmlFor="subject">How can I help you?</label>
                             <br/>
                             <select 
                                 onChange={e => this.setState({ subject: e.target.value})}
                                 name="subject"
-                                className="subject"
-                                placeholder="Subject"
+                                className="contact-input"
                                 value={this.state.subject}
                                 required
                             >
-                                <option value={null}>Select One</option>
+                                <option value="" disabled>Select One</option>
                                 <option value='Book Live'>Live Booking</option>
-                                <option value='Book Remote Recording'>Remote Recording</option>
+                                <option value='Remote Recording'>Remote Recording</option>
                                 <option value='other'>Other</option>
                             </select>
                             <br/>
@@ -171,14 +198,15 @@ class Contact extends Component {
                                 <input 
                                     onChange={(e) => this.setState({ subject2: e.target.value})}
                                     name="subject2"
-                                    className="subject2"
+                                    className="contact-input"
                                     type="text"
                                     placeholder="Custom Email Subject"
-                                    required value={this.state.subject2}
+                                    value={this.state.subject2}
+                                    required
                                 />
                              : null}
                         </div>
-                        <div className="col-12">
+                        <div className="col-12 form-col">
                             <label className="message" htmlFor="message">Your Message</label>
                             <br/>
                             <textarea 
@@ -191,12 +219,29 @@ class Contact extends Component {
                                 required
                             />
                         </div>
-                        <div className="col-12">
+                        <div className="col-12 form-col">
                             <div className="button-container">
                                 <button type="submit" className="button button-primary">{ this.state.buttonText }</button>
                             </div>
                         </div>
-                    </form>
+                    </form> : null }
+
+                    { this.state.sent ? <div>
+                        <h2>Thank you, {this.state.firstName}!</h2>
+                        <p>Your message has been sent successfully!</p>
+                        <div className="button-container">
+                            <button onClick={() => this.resetForm()} className="button button-primary">Okay!</button>
+                        </div>
+                        </div>
+                    : null }
+                    { this.state.error ? <div>
+                        <h2>So Sorry, {this.state.firstName}!</h2>
+                        <p>Something went wrong. Please try again.</p>
+                        <div className="button-container">
+                            <button onClick={() => this.resetError()} className="button button-primary">Okay!</button>
+                        </div>
+                        </div>
+                    : null }
                 </div>
             </div>
         </div>

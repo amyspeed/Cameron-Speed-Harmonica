@@ -1,0 +1,11 @@
+ .background-recording {
+    background-image: url('../images/fidora.jpg');
+    background-size: 60%;
+    /* background-repeat: no-repeat; */
+    background-position: 50% 80px;
+    height: 98vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
