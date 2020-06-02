@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faPaypal } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faYoutube, faPaypal } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import './footer.css';
@@ -18,8 +18,14 @@ const Footer = () => {
             <div className='icon-wrapper'>
                 <img className="img-icon" src={require("../images/fiverr.png")} alt="fiverr icon" />
             </div>
+            <div className='icon-wrapper' id="youtube">
+                <FontAwesomeIcon icon={faYoutube} className="awesome-icon" />
+            </div>
             <div className='icon-wrapper' id="paypal">
                 <FontAwesomeIcon icon={faPaypal} className="awesome-icon" />
+            </div>
+            <div className='icon-wrapper'>
+                <img className="img-icon" src={require("../images/cash-app.png")} alt="cash app icon" />
             </div>
             <div className='icon-wrapper'>
                 <img className="img-icon" src={require("../images/venmo.png")} alt="venmo icon" />
