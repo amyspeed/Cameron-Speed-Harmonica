@@ -1,6 +1,6 @@
 import React, { Component, useEffect } from 'react';
 
-import Mailchimp from 'react-mailchimp-form';
+// import Mailchimp from 'react-mailchimp-form';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
@@ -35,7 +35,7 @@ class Contact extends Component {
     formSubmit = (e) => {
         e.preventDefault();
 
-        // Add form validation before here
+        // Add form validation here
       
         this.setState({
             buttonText: '...sending'
