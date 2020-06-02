@@ -112,89 +112,91 @@ class Contact extends Component {
                     ]}
                 /> */}
                 <div className="row form-row">
-                <form className="contact-form" onSubmit={ (e) => this.formSubmit(e)}>
-                    <div className="col-6">
-                    <label className="name" htmlFor="first-name">First Name</label>
-                    <br/>
-                    <input 
-                        onChange={e => this.setState({ firstName: e.target.value})}
-                        name="first-name"
-                        className="name"
-                        type="text"
-                        placeholder="First Name"
-                        value={this.state.firstName}/>
-                    </div>
-                    <div className="col-6">
-                    <label className="name" htmlFor="last-name">Last Name</label>
-                    <br/>
-                    <input 
-                        onChange={e => this.setState({ lastName: e.target.value})}
-                        name="last-name"
-                        className="name"
-                        type="text"
-                        placeholder="Last Name"
-                        value={this.state.lastName}/>
+                    <form className="contact-form" onSubmit={ (e) => this.formSubmit(e)}>
+                        <div className="col-6">
+                            <label className="name" htmlFor="first-name">First Name</label>
+                            <br/>
+                            <input 
+                                onChange={e => this.setState({ firstName: e.target.value})}
+                                name="first-name"
+                                className="name"
+                                type="text"
+                                placeholder="First Name"
+                                value={this.state.firstName}
+                            />
+                        </div>
+                        <div className="col-6">
+                            <label className="name" htmlFor="last-name">Last Name</label>
+                            <br/>
+                            <input 
+                                onChange={e => this.setState({ lastName: e.target.value})}
+                                name="last-name"
+                                className="name"
+                                type="text"
+                                placeholder="Last Name"
+                                value={this.state.lastName}
+                            />
                         </div>
                         <div className="col-12">
-                    <label className="email" htmlFor="email">Your Email</label>
-                    <br/>
-                    <input 
-                        onChange={(e) => this.setState({ email: e.target.value})}
-                        name="email"
-                        className="email"
-                        type="email"
-                        placeholder="your@email.com"
-                        value={this.state.email}
-                        required
-                    />
-                    </div>
-                    <div className="col-12">
-                    <label className="subject" htmlFor="subject">How can I help you?</label>
-                    <br/>
-                    <select 
-                        onChange={e => this.setState({ subject: e.target.value})}
-                        name="subject"
-                        className="subject"
-                        placeholder="Subject"
-                        value={this.state.subject}
-                        required
-                    >
-                        <option value={null}>Select One</option>
-                        <option value='Book Live'>Live Booking</option>
-                        <option value='Book Remote Recording'>Remote Recording</option>
-                        <option value='other'>Other</option>
-                    </select>
-                    <br/>
-                    { this.state.customSubject ?
-                        <input 
-                            onChange={(e) => this.setState({ subject2: e.target.value})}
-                            name="subject2"
-                            className="subject2"
-                            type="text"
-                            placeholder="Custom Email Subject"
-                            required value={this.state.subject2}
-                        />
-                     : null}
-                     </div>
-                     <div className="col-12">
-                    <label className="message" htmlFor="message">Your Message</label>
-                    <br/>
-                    <textarea 
-                        onChange={e => this.setState({ message: e.target.value})}
-                        name="message"
-                        className="message"
-                        type="text"
-                        placeholder="Please write your message here"
-                        value={this.state.message}
-                        required
-                    />
-                    </div>
-                    <div className="col-12">
-                    <div className="button-container">
-                        <button type="submit" className="button button-primary">{ this.state.buttonText }</button>
-                    </div>
-                    </div>
-                </form>
+                            <label className="email" htmlFor="email">Your Email</label>
+                            <br/>
+                            <input 
+                                onChange={(e) => this.setState({ email: e.target.value})}
+                                name="email"
+                                className="email"
+                                type="email"
+                                placeholder="your@email.com"
+                                value={this.state.email}
+                                required
+                            />
+                        </div>
+                        <div className="col-12">
+                            <label className="subject" htmlFor="subject">How can I help you?</label>
+                            <br/>
+                            <select 
+                                onChange={e => this.setState({ subject: e.target.value})}
+                                name="subject"
+                                className="subject"
+                                placeholder="Subject"
+                                value={this.state.subject}
+                                required
+                            >
+                                <option value={null}>Select One</option>
+                                <option value='Book Live'>Live Booking</option>
+                                <option value='Book Remote Recording'>Remote Recording</option>
+                                <option value='other'>Other</option>
+                            </select>
+                            <br/>
+                            { this.state.customSubject ?
+                                <input 
+                                    onChange={(e) => this.setState({ subject2: e.target.value})}
+                                    name="subject2"
+                                    className="subject2"
+                                    type="text"
+                                    placeholder="Custom Email Subject"
+                                    required value={this.state.subject2}
+                                />
+                             : null}
+                        </div>
+                        <div className="col-12">
+                            <label className="message" htmlFor="message">Your Message</label>
+                            <br/>
+                            <textarea 
+                                onChange={e => this.setState({ message: e.target.value})}
+                                name="message"
+                                className="message"
+                                type="text"
+                                placeholder="Please write your message here"
+                                value={this.state.message}
+                                required
+                            />
+                        </div>
+                        <div className="col-12">
+                            <div className="button-container">
+                                <button type="submit" className="button button-primary">{ this.state.buttonText }</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
