@@ -32,6 +32,7 @@ This web application is a musician's marketing platform to connect to live and r
 * React
 * React Router DOM
 * React Hooks
+* React ToolTip
 * youtube & Spotify embedded iframes
 * Mailchimp API
 * Netlify
