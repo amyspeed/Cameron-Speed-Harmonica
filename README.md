@@ -45,3 +45,5 @@ The API Repository for email handling can be found [here](https://github.com/amy
 * Chai
 * Travis-ci
 * Heroku
+* Facebook Pixel
+* Google Analytics
