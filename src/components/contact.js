@@ -27,7 +27,6 @@ class Contact extends Component {
     }
 
     componentDidMount() {
-        console.log(this.state.signMeUp)
         if (this.props.location.state && this.props.location.state.fromRecord) {
             this.setState({ subject: 'Remote Recording' });
         }
@@ -61,7 +60,7 @@ class Contact extends Component {
             signMeUp: this.state.signMeUp
         }
 
-        console.log(data);
+        // console.log(data);
         
         fetch('https://cameron-speed-api.herokuapp.com/api/v1', {
         // fetch('http://localhost:8080/api/v1', {

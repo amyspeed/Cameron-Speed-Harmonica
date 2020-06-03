@@ -16,7 +16,6 @@ const NavBar = () => {
 
     useEffect(() => {
         // If on the landing page, the logo size depends on scroll location
-        console.log(pathname);
         if (pathname === '/') {
             setLogoSmaller(false);
             window.addEventListener("scroll", logoSizeByScroll)
@@ -26,7 +25,7 @@ const NavBar = () => {
         }
         // If on any other page, the logo should be smaller
         else {
-            console.log('Shrink logo NOW!!')
+            // console.log('Shrink logo NOW!!')
             setLogoSmaller(true);
         }
     }, [pathname]);
@@ -34,12 +33,12 @@ const NavBar = () => {
     const logoSizeByScroll = () => {
         // If at the top of the landing page, DON'T make the logo smaller
         if (window.pageYOffset < 90) {
-            console.log('dont shrink logo!!')
+            // console.log('dont shrink logo!!')
                 setLogoSmaller(false);
         }
         // If not at the top of the landing page, make the logo smaller
         else if (window.pageYOffset >= 90) {
-            console.log('Shrink logo NOW!!')
+            // console.log('Shrink logo NOW!!')
             setLogoSmaller(true);
         }
     };
