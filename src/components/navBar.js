@@ -56,7 +56,7 @@ const NavBar = () => {
             </Link>
 
             <div className="hamburger-container">
-                <input type="checkbox" className="toggler" id="toggler" checked={checked} onChange={() => setChecked(!checked)} />
+                <input type="checkbox" className="toggler" id="toggler" checked={checked} onChange={() => setChecked(!checked)} aria-label="toggle menu" />
                 <div className="hamburger">
                     <div className="line"></div>
                 </div>
