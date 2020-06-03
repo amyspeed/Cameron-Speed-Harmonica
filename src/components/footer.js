@@ -18,21 +18,29 @@ const Footer = () => {
                 </a>
             </div>
             <div className='icon-wrapper' data-for='toolTip' data-tip='Fiverr'>
-                <img className="img-icon" src={require("../images/fiverr.png")} alt="fiverr icon" />
+                <a href="https://www.fiverr.com/cameronspeed" target="_blank" rel="noopener noreferrer">
+                    <img className="img-icon" src={require("../images/fiverr.png")} alt="fiverr icon" />
+                </a>
             </div>
             <div className='icon-wrapper' id="youtube" data-for='toolTip' data-tip='Youtube'>
-                <FontAwesomeIcon icon={faYoutube} className="awesome-icon" />
+                <a href="https://www.youtube.com/channel/UCv_eY0PkGxmh-H3RXNu2X4w" target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={faYoutube} className="awesome-icon" />
+                </a>
             </div>
             <div className='icon-wrapper' id="paypal" data-for='toolTip' data-tip='Paypal'>
-                <FontAwesomeIcon icon={faPaypal} className="awesome-icon" />
+                <a href="https://paypal.me/cameronspeed" target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={faPaypal} className="awesome-icon" />
+                </a>
             </div>
             <div className='icon-wrapper' data-for='toolTip' data-tip='Cash App'>
-                <img className="img-icon" src={require("../images/cash-app.png")} alt="cash app icon" />
+                <a href="https://cash.app/$CameronSpeed" target="_blank" rel="noopener noreferrer">
+                    <img className="img-icon" src={require("../images/cash-app.png")} alt="cash app icon" />
+                </a>
             </div>
             <div className='icon-wrapper' data-for='toolTip' data-tip='Venmo'>
-                {/* <a href='http://venmo.com/Cameron-speed-1' target="_blank" rel="noopener noreferrer" > */}
+                <a href='http://venmo.com/Cameron-speed-1' target="_blank" rel="noopener noreferrer" >
                     <img className="img-icon" src={require("../images/venmo.png")} alt="venmo icon" />
-                {/* </a> */}
+                </a>
             </div>
             <div className='icon-wrapper' id="mail" data-for='toolTip' data-tip='Contact'>
                 <Link to='/contact'><FontAwesomeIcon icon={faEnvelope} className="awesome-icon" /></Link>

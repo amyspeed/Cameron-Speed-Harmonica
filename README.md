@@ -12,20 +12,20 @@ This web application is a musician's marketing platform to connect to live and r
 
 ### Landing Page
 
-![Landing]()
+![Landing](./public/landing.png)
 
 
-### About
+### Menu
 
-![About]()
+![Menu](./public/menu.png)
 
 ### Media
 
-![Media]()
+![Media](./public/media.png)
 
 ### Contact
 
-![Contact]()
+![Contact](./public/contact.png)
 
 ## Technologies
 
