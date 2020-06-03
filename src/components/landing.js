@@ -20,7 +20,9 @@ const Landing = () => {
                     </div>
                 </div>
                 {/* <div className="text-box">
-                    <p>text</p>
+                    <div className="row">
+
+                    </div>
                 </div> */}
                 {/* <div className="text-box">
                     <p>text</p>

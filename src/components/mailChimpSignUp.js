@@ -8,6 +8,18 @@ const MailChimpSignUp = () => {
                     action='https://cameronspeed.us10.list-manage.com/subscribe/post?u=efa5ed79bae35a177bae93184&amp;id=0711582ad9'
                     fields={[
                         {
+                            name: 'FNAME',
+                            placeholder: 'First Name',
+                            type: 'text',
+                            required: true
+                        },
+                        {
+                            name: 'LNAME',
+                            placeholder: 'Last Name',
+                            type: 'text',
+                            required: true
+                        },
+                        {
                             name: 'EMAIL',
                             placeholder: 'Email',
                             type: 'email',

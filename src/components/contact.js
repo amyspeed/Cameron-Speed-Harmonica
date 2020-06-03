@@ -20,13 +20,14 @@ class Contact extends Component {
             sent: false,
             error: false,
             customSubject: false,
+            signMeUp: true,
             buttonText: <FontAwesomeIcon icon={faPaperPlane} className="plane-icon" />,
             firstNameWarn: false
         }
     }
 
     componentDidMount() {
-        console.log(this.props.location.state)
+        console.log(this.state.signMeUp)
         if (this.props.location.state && this.props.location.state.fromRecord) {
             this.setState({ subject: 'Remote Recording' });
         }
@@ -56,7 +57,8 @@ class Contact extends Component {
             lastName: this.state.lastName,
             email: this.state.email,
             subject: `[CSHARPS]: ${this.state.customSubject ? this.state.subject2 : this.state.subject}`,
-            message: this.state.message
+            message: this.state.message,
+            signMeUp: this.state.signMeUp
         }
 
         console.log(data);
@@ -91,6 +93,7 @@ class Contact extends Component {
             sent: false,
             error: false,
             customSubject: false,
+            signMeUp: true,
             buttonText: <FontAwesomeIcon icon={faPaperPlane} className="plane-icon" />
         });
     }
@@ -194,6 +197,18 @@ class Contact extends Component {
                                 required
                             />
                         </div>
+                        <div className="col-12 check-container">
+                            <input 
+                                onChange={() => this.setState({ signMeUp: !this.state.signMeUp })}
+                                name="subscribe-check"
+                                className="contact-checkbox"
+                                type="checkbox"
+                                checked={this.state.signMeUp}
+                                value={this.state.signMeUp}
+                            />
+                            <label className="label-checkbox" htmlFor="subscribe-check">Subscribe to Email List</label>
+                        </div>
+
                         <div className="col-12 form-col">
                             <div className="button-container">
                                 <button type="submit" className="button button-primary">{ this.state.buttonText }</button>
