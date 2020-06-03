@@ -30,7 +30,9 @@ const Footer = () => {
                 <img className="img-icon" src={require("../images/cash-app.png")} alt="cash app icon" />
             </div>
             <div className='icon-wrapper' data-for='toolTip' data-tip='Venmo'>
-                <img className="img-icon" src={require("../images/venmo.png")} alt="venmo icon" />
+                {/* <a href='http://venmo.com/Cameron-speed-1' target="_blank" rel="noopener noreferrer" > */}
+                    <img className="img-icon" src={require("../images/venmo.png")} alt="venmo icon" />
+                {/* </a> */}
             </div>
             <div className='icon-wrapper' id="mail" data-for='toolTip' data-tip='Contact'>
                 <Link to='/contact'><FontAwesomeIcon icon={faEnvelope} className="awesome-icon" /></Link>

@@ -1,6 +1,4 @@
-import React, { Component, useEffect } from 'react';
-
-// import Mailchimp from 'react-mailchimp-form';
+import React, { Component } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
@@ -29,10 +27,10 @@ class Contact extends Component {
 
     componentDidMount() {
         console.log(this.props.location.state)
-        if (this.props.location.state.fromRecord) {
+        if (this.props.location.state && this.props.location.state.fromRecord) {
             this.setState({ subject: 'Remote Recording' });
         }
-        if (this.props.location.state.fromLive) {
+        if (this.props.location.state && this.props.location.state.fromLive) {
             this.setState({ subject: 'Live Booking' });
         }
     }
@@ -112,29 +110,6 @@ class Contact extends Component {
             <div className="overlay-contact"></div>
             <div className="contact-photo"></div>
             <div className="page-content contact-page">
-                {/* <a className="send-link-wrap" href="mailto:cameron.l.speed@gmail.com?subject=Mail from Website">
-                    <FontAwesomeIcon icon={faPaperPlane} className="plane-icon" />
-                </a> */}
-                {/* <form>
-
-                </form> */}
-                {/* <Mailchimp
-                    action='https://cameronspeed.us10.list-manage.com/subscribe/post?u=efa5ed79bae35a177bae93184&amp;id=0711582ad9'
-                    fields={[
-                        {
-                            name: 'EMAIL',
-                            placeholder: 'Email',
-                            type: 'email',
-                            required: true
-                        },
-                        {
-                            name: 'MESSAGE',
-                            placeholder: 'Message',
-                            type: 'text',
-                            required: true
-                        },
-                    ]}
-                /> */}
                 <div className="row form-row">
                     { !this.state.sent && !this.state.error ?
                     <form className="contact-form" onSubmit={ (e) => this.formSubmit(e)}>

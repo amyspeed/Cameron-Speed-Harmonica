@@ -68,6 +68,12 @@ button {
     height: 45px;
     color: white;
     font-size: 20px;
+    transition: all ease-in-out 0.15s;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: translate(0, -1.5px) scale(1.01);
 }
 
 .plane-icon {
