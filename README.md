@@ -5,27 +5,27 @@ This web application is a musician's marketing platform to connect to live and r
 ## Live Version
 [See the live app here!](https://www.cameronspeed.com)
 
-## The API Repo for email handling
-[Can be found here.](https://github.com/amyspeed/Cameron-API)
+## API Repo
+The API Repository for email handling can be found [here](https://github.com/amyspeed/Cameron-API)
 
 ## Take a Look Inside!
 
 ### Landing Page
 
-![Landing](./public/landing.png)
+![Landing](./public/screenshots/landing.png)
 
 
 ### Menu
 
-![Menu](./public/menu.png)
+![Menu](./public/screenshots/menu.png)
 
 ### Media
 
-![Media](./public/media.png)
+![Media](./public/screenshots/media.png)
 
 ### Contact
 
-![Contact](./public/contact.png)
+![Contact](./public/screenshots/contact.png)
 
 ## Technologies
 
