@@ -3,8 +3,14 @@ import MailChimpSignUp from'./mailChimpSignUp';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import smoothscroll from 'smoothscroll-polyfill';
 
 import './landing.css';
+
+
+// kick off the polyfill!
+smoothscroll.polyfill();
+
 
 const Landing = () => {
     const [chevronScrolledUp, setToTop] = useState(false);
@@ -13,10 +19,10 @@ const Landing = () => {
     const scrollDownClick = (e) => {
         e.preventDefault();
         if (!chevronScrolledUp) {
-            window.scrollBy({top: 480, behavior: 'smooth'});
+            window.scrollBy({top: Number(window.innerHeight - 250), behavior: 'smooth'});
         }
         else {
-            window.scrollBy({top: Number(-window.innerHeight), behavior: 'smooth' });
+            window.scrollTo({top: 0, behavior: 'smooth' });
         }
     }
 
@@ -34,10 +40,10 @@ const Landing = () => {
         else if (window.pageYOffset >= 300 && !chevronScrolledUp) {
             setToTop(true);
         }
-        else if (window.pageYOffset >= 490 && !hideChevron) {
+        else if (window.pageYOffset >= Number(window.innerHeight - 235) && !hideChevron) {
             setChevronHide(true);
         }
-        else if (window.pageYOffset < 490 && hideChevron) {
+        else if (window.pageYOffset < Number(window.innerHeight - 235) && hideChevron) {
             setChevronHide(false);
         }
     }
