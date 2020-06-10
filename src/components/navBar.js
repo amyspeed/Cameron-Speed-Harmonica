@@ -63,14 +63,14 @@ const NavBar = () => {
                     <div>
                         <div>
                             <ul>
-                                <li onClick={() => closeMenuLink('/about')}>about</li>
-                                <li onClick={() => closeMenuLink('/contact')}>contact</li>
-                                <li onClick={() => closeMenuLink('/live')}>live booking</li>
-                                <li onClick={() => closeMenuLink('/record')}>remote recording</li>
-                                <li onClick={() => closeMenuLink('/media')}>media</li>
+                                <li onClick={() => closeMenuLink('/about')}>About</li>
+                                <li onClick={() => closeMenuLink('/contact')}>Contact</li>
+                                <li onClick={() => closeMenuLink('/live')}>Live Booking</li>
+                                <li onClick={() => closeMenuLink('/record')}>Remote Recording</li>
+                                <li onClick={() => closeMenuLink('/media')}>Media</li>
                                 {/* <li onClick={() => closeMenuLink('/pricing')}>pricing</li>
                                 <li onClick={() => closeMenuLink('/reviews')}>reviews</li> */}
-                                <li onClick={() => closeMenuLink('/')}>home</li>
+                                <li onClick={() => closeMenuLink('/')}>Home</li>
                             </ul>
                         </div>
                     </div>

@@ -24,15 +24,20 @@
 
 .content {
     position: absolute;
-    margin-top: 100vh;
+    margin-top: 85vh;
     padding-bottom: 70px;
     z-index: 1;
     width: 100%;
+    transition: all ease-in-out .7s;
 }
 
+/* .top {
+    margin-top: 150px;
+} */
+
 .mail-chimp {
-    width: 70%;
-    max-width: 500px;
+    width: 80%;
+    max-width: 700px;
     min-width: 250px;
     margin-right: auto;
     margin-left: auto;
@@ -58,3 +63,52 @@ input:focus{
     font-family: 'Noto Sans', sans-serif;
     font-size: 18px;
 }
+
+.welcome-txt {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.welcome-link {
+    color: inherit;
+    text-decoration: underline;
+    font-weight: bold;
+    display: inline-block;
+    transition: all 0.15s ease;
+}
+
+.welcome-link:hover {
+    transform: translate(0, -1.5px) scale(1.03);
+
+}
+
+.header-box {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.chevron-box {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: -15px;
+}
+
+#chevron {
+    font-size: 25px;
+    transition: all ease-in-out 0.3s;
+}
+
+/* @media only screen and (min-width: 640px) {
+    .chevron-box {
+        display: none;
+    }
+    .content {
+        margin-top: 80vh;
+    }
+} */

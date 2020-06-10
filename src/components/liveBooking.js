@@ -13,7 +13,7 @@ const LiveBooking = () => {
                     <div className="col-12">
                         <Link className="link" to={{ pathname: "/contact", state: { fromLive: true } }}>
                             <div className="text-box text-box-link">
-                                <h2>live booking</h2>
+                                <h2>Live Booking</h2>
                                 <p>I would love to play in your show! Pricing will vary depending on travel and other factors. Please click here to book a live show.</p>
                             </div>
                         </Link>

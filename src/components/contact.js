@@ -115,7 +115,7 @@ class Contact extends Component {
                 <div className="row form-row">
                     { !this.state.sent && !this.state.error ?
                     <form className="contact-form" onSubmit={ (e) => this.formSubmit(e)}>
-                    <legend><h2>contact</h2></legend>
+                    <legend><h2>Contact</h2></legend>
                         <div className="col-6 form-col">
                             <label className="name" htmlFor="first-name">First Name</label>
                             <br/>
