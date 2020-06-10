@@ -5,6 +5,9 @@ import './media.css'
 
 class YoutubePlayer extends Component {
     videoOnReady(e) {
+        window.YTConfig = {
+            host: 'https://www.youtube.com' 
+          } 
         e.target.pauseVideo();
     }
 
@@ -15,7 +18,9 @@ class YoutubePlayer extends Component {
             playerVars: {
                 autoplay: 0,
                 // color of progess bar:
-                color: 'white'
+                color: 'white',
+                // this origin definition was meant to solve the "Failed to execute 'postMessage' on 'DOMWindow'" error. No luck yet.
+                origin: 'http://localhost:3000' || 'https://www.cameronspeed.com',
             }
         }
 

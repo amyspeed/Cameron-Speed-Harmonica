@@ -20,6 +20,7 @@ class App extends Component {
     this.isCookieSupported();
   }
 
+  // This function allows for cookies from the facebook pixel (HTML head), but not the media iframes yet (media.js)
   isCookieSupported = () => {
     let cookieEnabled = window.navigator.cookieEnabled;
     if (cookieEnabled) {
