@@ -15,6 +15,25 @@ import './App.css';
 import './float-grid.css';
 
 class App extends Component {
+
+  componentDidMount() {
+    this.isCookieSupported();
+  }
+
+  isCookieSupported = () => {
+    let cookieEnabled = window.navigator.cookieEnabled;
+    if (cookieEnabled) {
+        document.cookie = `testcookie=testcookie`;
+        cookieEnabled = document.cookie.indexOf(`testcookie=testcookie`) !== -1;
+        if (!cookieEnabled) {
+            document.cookie = `testcookie=testcookie; SameSite=None; Secure`;
+            cookieEnabled =
+                document.cookie.indexOf(`testcookie=testcookie`) !== -1;
+        }
+    }
+    return cookieEnabled;
+  };
+
   render() {
     return(
       <div className="app">
