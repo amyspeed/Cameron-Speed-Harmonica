@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import smoothscroll from 'smoothscroll-polyfill';
+import Spinner from 'react-spinkit';
 
 import './landing.css';
 
@@ -78,20 +79,26 @@ const Landing = () => {
 
                     </div>
                     <div className="col-6">
-                        <div>
-                            <img style={{width : '50%', marginLeft : 'auto', marginRight : 'auto'}} src={require("../images/cash-app.png")} />
+                        <div className="ad-box">
+                            <div className="ad-record">
+                                <Spinner name="line-scale-party" color="white" className="wave" />
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div className="row">
                     <div className="col-6">
-                        <div>
-                            <img style={{width : '50%', marginLeft : 'auto', marginRight : 'auto'}} src={require("../images/cash-app.png")} />
+                        <div className="ad-box">
+                            <div className="ad-live">
+                                <Spinner name="line-scale-party" color="white" className="wave" fadeIn='none' />
+                            </div>
                         </div>
                     </div>
                     <div className="col-6">
                         <h2>Cameron plays like a goddess live. Sweet and smooth. <br/> -anonymous</h2>
                     </div>
-                </div>
-                <div className="text-box text-box-landing">
+                </div> */}
+                {/* <div className="text-box text-box-landing">
                     <div className="row">
                         <h2>Upcomming Events</h2>
                         <p>Bands in town API??</p>

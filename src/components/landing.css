@@ -112,3 +112,34 @@ input:focus{
         margin-top: 80vh;
     }
 } */
+
+.ad-box {
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.ad-live, .ad-record {
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ad-record {
+    background-color: rgb(255, 32, 32);
+}
+
+.ad-live {
+    background-color: rgb(255, 240, 32);
+}
+
+.wave {
+    /* width: 50%; */
+}
+
+.sk-line {
+    width: 100px;
+    height: 100px;
+}
