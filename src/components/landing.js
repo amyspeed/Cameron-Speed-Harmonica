@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import smoothscroll from 'smoothscroll-polyfill';
-import Spinner from 'react-spinkit';
+// import Spinner from 'react-spinkit';
 
 import './landing.css';
 
