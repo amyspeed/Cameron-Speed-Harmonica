@@ -23,7 +23,7 @@ const About = () => {
                                 <br/><br/>
                                 Find out more about booking <Link className="welcome-link" to='/live'>live</Link> and&nbsp;
                                 <Link className="welcome-link" to='/record'>remote recordings</Link>,&nbsp;
-                                or listen to some examples of work <Link className="welcome-link" to='/media'>here</Link>.</p>
+                                or <Link className="welcome-link" to='/media'>listen to some examples of work</Link>.</p>
                         </div>
                     </div>
                 </div>

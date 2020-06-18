@@ -66,7 +66,7 @@ const Landing = () => {
                                 Cameron is available now for <Link className="welcome-link" to='/live'>LIVE shows</Link> and&nbsp;
                                 <Link className="welcome-link" to='/record'> Remote recordings</Link>.&nbsp;
                                 <Link className="welcome-link" to='/contact'> Contact</Link> him directly for details.<br/>
-                                <br/>Who is Cameron? Find out <Link className="welcome-link" to='/about'>here</Link> and listen <Link className="welcome-link" to='/media'>here</Link>!
+                                <br/>Who is Cameron? <Link className="welcome-link" to='/about'>Find out here</Link> and <Link className="welcome-link" to='/media'>listen here</Link>!
                             </p>
                         </div>
                     </div>
