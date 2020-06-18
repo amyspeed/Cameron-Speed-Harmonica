@@ -21,7 +21,7 @@ const About = () => {
 
                                 <br/><br/>Currently residing in Austin with his wife and fur babies, Cameron travels anywhere and everywhere for the love of playing music. He also works days as a massage therapist and occasionally runs live sound by night when he isn't playing.
                                 <br/><br/>
-                                Find out more about booking <Link className="welcome-link" to='/live'>live</Link> and&nbsp;
+                                Find out more about <Link className="welcome-link" to='/live'>booking live</Link> and&nbsp;
                                 <Link className="welcome-link" to='/record'>remote recordings</Link>,&nbsp;
                                 or <Link className="welcome-link" to='/media'>listen to some examples of work</Link>.</p>
                         </div>
