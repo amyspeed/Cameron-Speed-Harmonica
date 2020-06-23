@@ -32,6 +32,7 @@ The API Repository for email handling can be found [here](https://github.com/amy
 * React
 * React Router DOM
 * React Hooks
+* Progressive Web App Optimization
 * React ToolTip
 * youtube & Spotify embedded iframes
 * Mailchimp API
